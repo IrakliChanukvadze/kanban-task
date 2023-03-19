@@ -47,7 +47,7 @@ const BoardModal = () => {
   return (
     <Modal open={boardModal} onClose={boardModalCloser}>
       <div
-        className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ${Container} w-[90vw] max-w-[480px]`}
+        className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ${textHeader} ${Container} w-[90vw] max-w-[480px]`}
       >
         <NewColumnModal
           open={columnModal}
@@ -56,24 +56,24 @@ const BoardModal = () => {
           columns={formText.columns}
         />
         <div className="w-[87%] m-auto py-8 ">
-          <h2 className={`${textHeader} font-bold mb-6 text-[18px] leading-6`}>
+          <h2 className={` font-bold mb-6 text-[18px] leading-6`}>
             Add New Board
           </h2>
           <h3 className={`${textHeader}`}>Board Name</h3>
           <input
             type="text"
             name="boardName"
-            className={`w-full rounded border-[1px] border-[#828FA3] pl-4 py-2 mt-2 mb-6 bg-transparent`}
+            className={`w-full rounded border-[1px] border-[#828FA3]  pl-4 py-2 mt-2 mb-6 bg-transparent`}
             placeholder="e.g. Web Design"
             value={formText.boardName}
             onChange={addFormText}
           />
-          <h3 className={`${textHeader} mb-2`}>Board Columns</h3>
+          <h3 className={` mb-2`}>Board Columns</h3>
           <div className=" overflow-auto max-h-[40vh]">
             {formText.columns.map((item, index) => (
               <div key={item} className="flex items-center gap-4 mb-3 ">
                 <div
-                  className={`flex-1 flex items-center pl-4 py-2  rounded border-[1px] border-[#828FA3]  bg-transparent ${textHeader}`}
+                  className={`flex-1 flex items-center pl-4 py-2  rounded border-[1px] border-[#828FA3]  bg-transparent `}
                 >
                   {item}
                 </div>

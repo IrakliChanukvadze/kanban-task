@@ -5,10 +5,11 @@ import SideBar from "./Components/SideBar";
 import { themeToggler } from "./Styles";
 import { BsEye } from "react-icons/bs";
 import BoardModal from "./Components/BoardModal";
+import Header from "./Components/Header";
 
 function App() {
-  const { setOpen, theme, open } = useContext(Context);
-  const { Background, Container } = themeToggler();
+  const { setOpen } = useContext(Context);
+  const { Background } = themeToggler();
 
   return (
     <div className={`h-[100vh] w-[100vw] ${Background}`}>
@@ -19,24 +20,7 @@ function App() {
       >
         <BsEye size={20} className="font-bold" />
       </div>
-      <div
-        className={`absolute h-15 md:h-16 xl:h-24 px-6 top-0 left-0 flex items-center gap-4 w-[210px] ${
-          theme === "light" ? "border-r-#E4EBFA" : "border-r-#3E3F4E"
-        } ${open && "hidden"} border-r-[1px] ${Container} `}
-      >
-        <div className="flex gap-[1px]">
-          <div className="w-[6px] h-6 bg-[#635FC7] "></div>
-          <div className="w-[6px] h-6 bg-[#635FC7] opacity-75 "></div>
-          <div className="w-[6px] h-6 bg-[#635FC7] opacity-50 "></div>
-        </div>
-        <h2
-          className={`font-bold text-2xl tracking-[1px] ${
-            theme === "light" ? "text-black" : "text-white"
-          }`}
-        >
-          kanban
-        </h2>
-      </div>
+      <Header />
       <SideBar />
     </div>
   );
