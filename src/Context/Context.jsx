@@ -8,7 +8,7 @@ const ContextProvider = (props) => {
   const [open, setOpen] = React.useState(false);
   const [theme, setTheme] = useState("light");
   const [allData, setAllData] = useState(data.boards);
-  const [current, setCurrent] = useState("Platform Launch");
+  const [current, setCurrent] = useState(allData[0].name);
   const [boardModal, boardModalOpener, boardModalCloser] = useModalOpener();
 
   const toggleDrawer = (open) => (event) => {

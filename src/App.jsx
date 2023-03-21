@@ -4,8 +4,9 @@ import { Context } from "./Context/Context";
 import SideBar from "./Components/SideBar";
 import { themeToggler } from "./Styles";
 import { BsEye } from "react-icons/bs";
-import BoardModal from "./Components/BoardModal";
+import BoardModal from "./Components/BoardModals/BoardModal";
 import Header from "./Components/Header";
+import MainContent from "./Components/MainContent";
 
 function App() {
   const { setOpen } = useContext(Context);
@@ -22,6 +23,7 @@ function App() {
       </div>
       <Header />
       <SideBar />
+      <MainContent />
     </div>
   );
 }

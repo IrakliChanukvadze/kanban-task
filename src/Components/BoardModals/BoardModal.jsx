@@ -1,10 +1,10 @@
 import { Modal } from "@mui/material";
 import React, { useContext, useState } from "react";
-import { Context } from "../Context/Context";
-import { themeToggler } from "../Styles";
+import { Context } from "../../Context/Context";
+import { themeToggler } from "../../Styles";
 import { GrClose } from "react-icons/gr";
 import NewColumnModal from "./NewColumnModal";
-import useModalOpener from "../Hooks/useModalOpener";
+import useModalOpener from "../../Hooks/useModalOpener";
 
 const BoardModal = () => {
   const { Container, textHeader } = themeToggler();
@@ -23,7 +23,6 @@ const BoardModal = () => {
   };
 
   const addBoard = () => {
-    console.log(allData.some((item) => item.name === formText.boardName));
     if (allData.some((item) => item.name === formText.boardName)) {
       setError("Board already excists");
     } else if (!formText.boardName) {
@@ -33,7 +32,12 @@ const BoardModal = () => {
     } else {
       setAllData((prev) => [
         ...prev,
-        { name: formText.boardName, columns: [...formText.columns] },
+        {
+          name: formText.boardName,
+          columns: [
+            ...formText.columns.map((item) => ({ name: item, tasks: [] })),
+          ],
+        },
       ]);
       boardModalCloser();
       setFormText({
