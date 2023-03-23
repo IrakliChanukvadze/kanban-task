@@ -166,6 +166,14 @@ const AddNewTaskModal = ({ open, onClose }) => {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
+            MenuProps={{
+              PaperProps: {
+                sx: {
+                  color: theme === "light" ? "#000" : "#fff",
+                  bgcolor: theme === "light" ? "#F4F7FD" : "#1F212C",
+                },
+              },
+            }}
             sx={{
               width: "100%",
               height: "40px",

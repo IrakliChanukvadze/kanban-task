@@ -42,7 +42,7 @@ const SideBar = () => {
               className={`h-full w-0 sm:w-[33vw] md:w-[21vw] ${Container} relative text-[#828FA3] `}
             >
               <div
-                className={`h-15 md:h-16 xl:h-24 m-auto flex items-center gap-4 w-[84%]  `}
+                className={`py-4 sm:py-6 xl:py-8 m-auto flex items-center gap-4 w-[84%]  `}
               >
                 <div className="flex gap-[1px]">
                   <div className="w-[6px] h-6 bg-[#635FC7] "></div>

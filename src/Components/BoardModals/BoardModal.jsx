@@ -8,9 +8,17 @@ import useModalOpener from "../../Hooks/useModalOpener";
 
 const BoardModal = () => {
   const { Container, textHeader } = themeToggler();
-  const { boardModal, boardModalCloser, theme, allData, setAllData } =
-    useContext(Context);
-  const [columnModal, columnModalOpener, columnModalCloser] = useModalOpener();
+  const {
+    boardModal,
+    boardModalCloser,
+    theme,
+    allData,
+    setAllData,
+    columnModal,
+    columnModalOpener,
+    columnModalCloser,
+  } = useContext(Context);
+
   const [error, setError] = useState("");
   const [formText, setFormText] = useState({
     boardName: "",
@@ -27,7 +35,7 @@ const BoardModal = () => {
       setError("Board already excists");
     } else if (!formText.boardName) {
       setError("Please fill board name");
-    } else if (!formText.columns) {
+    } else if (!formText.columns.length) {
       setError("Please add at least one column");
     } else {
       setAllData((prev) => [
