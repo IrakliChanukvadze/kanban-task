@@ -160,7 +160,7 @@ const AddNewTaskModal = ({ open, onClose }) => {
             } text-[#635FC7] cursor-pointer`}
             onClick={handleSubtaskOpener}
           >
-            + Add New Task
+            + Add New Subtask
           </div>
           <h3 className={`${textHeader} mt-4`}>Status</h3>
           <Select

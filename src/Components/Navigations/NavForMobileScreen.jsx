@@ -1,9 +1,9 @@
 import { Modal } from "@mui/material";
 import React, { useContext } from "react";
-import { Context } from "../Context/Context";
-import { themeToggler } from "../Styles";
+import { Context } from "../../Context/Context";
+import { themeToggler } from "../../Styles";
 import { TbLayoutBoardSplit } from "react-icons/tb";
-import { BsMoonStarsFill, BsFillSunFill, BsEyeSlash } from "react-icons/bs";
+import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 const NavForMobileScreen = ({ open, close }) => {
   const { Container, Background } = themeToggler();

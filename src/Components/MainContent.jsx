@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../Context/Context";
 import { themeToggler } from "../Styles";
-import MainColumns from "./MainColumns";
+import MainColumns from "./Columns/MainColumns";
 
 const MainContent = () => {
-  const { theme, open, allData, current, columnModalOpener } =
+  const { theme, open, allData, current, newColumnModalOpener } =
     useContext(Context);
   const { textHeader, Background, Container } = themeToggler();
 
@@ -27,7 +27,7 @@ const MainContent = () => {
         ))}
       <div
         className={`flex items-center justify-center gap-6 w-[28%] max-h-[80vh] min-w-[250px] mt-6 ${Container} cursor-pointer ${textHeader} font-bold`}
-        // onClick={columnModalOpener}
+        onClick={newColumnModalOpener}
       >
         + add column
       </div>

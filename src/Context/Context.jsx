@@ -11,6 +11,8 @@ const ContextProvider = (props) => {
   const [current, setCurrent] = useState(allData[0].name);
   const [column, setColumn] = useState("");
   const [boardModal, boardModalOpener, boardModalCloser] = useModalOpener();
+  const [newColumnModal, newColumnModalOpener, newColumnModalCloser] =
+    useModalOpener();
   const [deleteBoardModal, deleteBoardModalOpener, deleteBoardModalCloser] =
     useModalOpener();
   const [task, setTask] = useState({
@@ -50,6 +52,9 @@ const ContextProvider = (props) => {
         deleteBoardModal,
         deleteBoardModalOpener,
         deleteBoardModalCloser,
+        newColumnModal,
+        newColumnModalOpener,
+        newColumnModalCloser,
       }}
     >
       {props.children}

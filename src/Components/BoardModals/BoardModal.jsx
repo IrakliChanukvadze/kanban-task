@@ -8,16 +8,9 @@ import useModalOpener from "../../Hooks/useModalOpener";
 
 const BoardModal = () => {
   const { Container, textHeader } = themeToggler();
-  const {
-    boardModal,
-    boardModalCloser,
-    theme,
-    allData,
-    setAllData,
-    columnModal,
-    columnModalOpener,
-    columnModalCloser,
-  } = useContext(Context);
+  const { boardModal, boardModalCloser, theme, allData, setAllData } =
+    useContext(Context);
+  const [columnModal, columnModalOpener, columnModalCloser] = useModalOpener();
 
   const [error, setError] = useState("");
   const [formText, setFormText] = useState({

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { Context } from "../Context/Context";
-import EditTaskModal from "./Tasks/EditTaskModal";
-import TaskContainer from "./Tasks/TaskContainer";
+import { Context } from "../../Context/Context";
+import EditTaskModal from "../Tasks/EditTaskModal";
+import TaskContainer from "../Tasks/TaskContainer";
 import { RiDeleteBin6Line, RiDeleteBin6Fill } from "react-icons/ri";
 
 const MaincColumns = ({ item }) => {

@@ -9,11 +9,11 @@ const SubtaskModal = ({ open, close, subtasks, setTaskForm }) => {
   const [subtaskName, setSubtaskName] = useState("");
   const [error, setError] = useState("");
 
-  const addColumn = () => {
+  const addSubTask = () => {
     if (!subtaskName) {
       setError("Name is required");
     } else if (subtasks.some((item) => item.title === subtaskName)) {
-      setError("Column already excists");
+      setError("Subtask already excists");
     } else {
       setTaskForm((prev) => ({
         ...prev,
@@ -40,7 +40,7 @@ const SubtaskModal = ({ open, close, subtasks, setTaskForm }) => {
       <div
         className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ${Container} w-[90vw] max-w-[480px] py-10 border-2`}
       >
-        <h2 className={`text-center mb-4 ${textHeader}`}>Add new Column</h2>
+        <h2 className={`text-center mb-4 ${textHeader}`}>Add new Subtask</h2>
         <div className="w-[87%] m-auto">
           <input
             type="text"
@@ -57,9 +57,9 @@ const SubtaskModal = ({ open, close, subtasks, setTaskForm }) => {
           className={`w-[40%] m-auto py-2 border-2 rounded-lg ${
             theme === "light" ? "bg-[#EFEFF9]" : "bg-white"
           } text-[#635FC7] cursor-pointer flex justify-center mt-4`}
-          onClick={addColumn}
+          onClick={addSubTask}
         >
-          Add Column
+          Add SubTask
         </div>
       </div>
     </Modal>

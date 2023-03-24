@@ -5,7 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import AddNewTaskModal from "./Tasks/AddNewTaskModal";
 import useModalOpener from "../Hooks/useModalOpener";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import NavForMobileScreen from "./NavForMobileScreen";
+import NavForMobileScreen from "./Navigations/NavForMobileScreen";
 
 const Header = () => {
   const { theme, open, current } = useContext(Context);

@@ -1,7 +1,7 @@
 import { Button, Drawer } from "@mui/material";
 import React, { useContext } from "react";
-import { Context } from "../Context/Context";
-import { themeToggler } from "../Styles";
+import { Context } from "../../Context/Context";
+import { themeToggler } from "../../Styles";
 import { BsMoonStarsFill, BsFillSunFill, BsEyeSlash } from "react-icons/bs";
 import { TbLayoutBoardSplit } from "react-icons/tb";
 
