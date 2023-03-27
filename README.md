@@ -37,7 +37,7 @@ Users should be able to:
 - [Solution URL](https://github.com/IrakliChanukvadze/kanban-task)
 - [Live Site URL](https://iraklichanukvadze.github.io/crypto-dice/#/)
 
-Built with:
+##Built with:
 
 
 - [React](https://reactjs.org/) - JS library
