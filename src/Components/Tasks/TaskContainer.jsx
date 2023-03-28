@@ -2,12 +2,20 @@ import React, { useContext, useState } from "react";
 import { themeToggler } from "../../Styles";
 import { RiDeleteBin6Line, RiDeleteBin6Fill } from "react-icons/ri";
 import { Context } from "../../Context/Context";
+import { useDrag } from "react-dnd";
 
 const TaskContainer = ({ task, colName }) => {
   const { Container } = themeToggler();
   const { setAllData, current, handleEditTaskOpen, setTask, setColumn } =
     useContext(Context);
   const [hovered, setHovered] = useState(false);
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: "task",
+    item: { id: task.title, column: colName, task: task },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  }));
 
   const deleteTask = () => {
     setAllData((prev) => {
@@ -28,7 +36,10 @@ const TaskContainer = ({ task, colName }) => {
   };
   return (
     <div
-      className={`flex flex-col gap-6 ${Container} py-2 px-4 relative cursor-pointer`}
+      ref={drag}
+      className={`flex flex-col gap-6 ${Container} py-2 px-4 relative cursor-pointer ${
+        isDragging && "opacity-30"
+      }`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

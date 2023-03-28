@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "../Data/data.json";
 import useModalOpener from "../Hooks/useModalOpener";
 
