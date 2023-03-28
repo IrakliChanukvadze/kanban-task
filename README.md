@@ -24,6 +24,7 @@ Users should be able to:
 - Mark subtasks as complete and move tasks between columns
 - Hide/show the board sidebar
 - Toggle the theme between light/dark modes
+- Allow users to drag and drop tasks to change their status
 
 ### Screenshot
 
