@@ -10,7 +10,9 @@ import NavForMobileScreen from "./Navigations/NavForMobileScreen";
 const Header = () => {
   const { theme, open, current } = useContext(Context);
   const { Container } = themeToggler();
-  const [butText, setButText] = useState("+ add menu task");
+  const [butText, setButText] = useState(
+    window.innerWidth < 640 ? "+" : "+ add menu task"
+  );
   const [navModalOpen, navModalOpener, navModalCloser] = useModalOpener();
 
   const [taskModal, taskModalOpener, taskModalCloser] = useModalOpener();
