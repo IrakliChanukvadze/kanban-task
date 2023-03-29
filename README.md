@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/IrakliChanukvadze/kanban-task)
-- [Live Site URL](https://iraklichanukvadze.github.io/crypto-dice/#/)
+- [Live Site URL](https://iraklichanukvadze.github.io/kanban-task/)
 
 ### Built with:
 
